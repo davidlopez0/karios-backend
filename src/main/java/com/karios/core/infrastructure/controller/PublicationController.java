@@ -57,7 +57,7 @@ public class PublicationController {
 
     @PostMapping("/create")
     public ResponseEntity<Publication> createPublication(@RequestBody PublicationEntity publication){
-        Publication publicationSaved = publicationService.createUser(publication);
+        Publication publicationSaved = publicationService.createPublication(publication);
         if(publicationSaved instanceof Publication){
             return new ResponseEntity<>(publicationSaved, HttpStatus.CREATED);
         }
@@ -67,7 +67,7 @@ public class PublicationController {
 
     @PatchMapping("/update/{id}")
     public ResponseEntity<Publication> updatePublication(@PathVariable Integer id, @RequestBody Publication publication){
-        Publication publicationUpdated = publicationService.updateUser(id, publication);
+        Publication publicationUpdated = publicationService.updatePublication(id, publication);
         if(publicationUpdated instanceof Publication){
             return new ResponseEntity<>(publicationUpdated, HttpStatus.OK);
         }

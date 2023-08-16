@@ -48,7 +48,7 @@ public class PublicationService {
         return null;
     }
 
-    public Publication createUser(PublicationEntity publicationEntity){
+    public Publication createPublication(PublicationEntity publicationEntity){
         Publication publicationSaved = publicationRepository.save(publicationEntity);
         if(publicationSaved instanceof Publication){
             return publicationSaved;
@@ -57,7 +57,7 @@ public class PublicationService {
         return null;
     }
 
-    public Publication updateUser(Integer id, Publication publication){
+    public Publication updatePublication(Integer id, Publication publication){
         Optional<PublicationEntity> publicationSearched = publicationRepository.getById(id);
         if(publicationSearched.isPresent()){
             PublicationEntity publicationEntity = publicationSearched.get();
