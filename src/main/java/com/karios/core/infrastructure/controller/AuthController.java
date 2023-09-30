@@ -62,7 +62,6 @@ public class AuthController {
 	public ResponseEntity<Boolean> checkToken(@RequestHeader("Authorization") String token) {
 		
 		String jwt = token.split(" ")[1].trim();
-		System.out.println(jwt);
 		
 		Boolean valid = this.jwtUtil.isValid(jwt);
 		if(valid) {

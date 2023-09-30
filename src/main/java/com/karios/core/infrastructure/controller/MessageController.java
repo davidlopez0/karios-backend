@@ -26,6 +26,11 @@ public class MessageController {
     public List<Message> getAll(){
         return messageService.getAll();
     }
+    
+    @GetMapping("/chat-id/{id}")
+    public List<Message> getAllByChatId(@PathVariable Integer id){
+    	return messageService.getAllByChatId(id);
+    }
 
     @PostMapping("/create")
     public Message createMessage(@RequestBody MessageEntity messageEntity){

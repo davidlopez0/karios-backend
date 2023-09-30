@@ -33,6 +33,7 @@ public class WebSecurityConfig {
                 .requestMatchers(HttpMethod.GET, "/api/auth/**").permitAll()
                 .requestMatchers(HttpMethod.POST, "/api/auth/**").permitAll()
                 .requestMatchers(HttpMethod.POST, "/api/users/**").permitAll()
+                .requestMatchers(HttpMethod.GET, "/ws").permitAll()
                 .anyRequest()
                 .authenticated()
                 .and()

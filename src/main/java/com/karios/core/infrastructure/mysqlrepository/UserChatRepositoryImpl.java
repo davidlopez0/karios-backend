@@ -27,7 +27,7 @@ public class UserChatRepositoryImpl implements UserChatRepository {
     @Override
     public List<UserChat> getAllByUserId(Integer id) {
         return mapper.toUsersChats((List<UserChatEntity>)
-                userChatCrudRepository.findAllByUserId(id));
+                userChatCrudRepository.findAllChatsByUserId(id));
     }
 
     @Override

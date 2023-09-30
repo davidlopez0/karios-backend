@@ -18,6 +18,10 @@ public class MessageService {
     public List<Message> getAll(){
         return messageRepository.getAll();
     }
+    
+    public List<Message> getAllByChatId(Integer id){
+    	return messageRepository.getAllByChatId(id);
+    }
 
     public Message save(MessageEntity messageEntity){
         return messageRepository.save(messageEntity);

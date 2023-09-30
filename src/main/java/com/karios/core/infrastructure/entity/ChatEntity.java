@@ -21,7 +21,6 @@ public class ChatEntity {
     @Column(name = "chat_id")
     private Integer chatId;
     @Column(name = "chat_date")
-    @JsonFormat(pattern = "yyyy-mm-dd")
     private Date chatDate;
 
     @OneToMany(mappedBy = "chat")

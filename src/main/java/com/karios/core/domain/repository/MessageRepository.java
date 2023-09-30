@@ -7,6 +7,7 @@ import com.karios.core.infrastructure.entity.MessageEntity;
 
 public interface MessageRepository {
 	List<Message> getAll();
+	List<Message> getAllByChatId(Integer id);
     Message save(MessageEntity messageEntity);
     void deleteById(Integer id);
 }

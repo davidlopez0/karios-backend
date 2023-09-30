@@ -22,7 +22,6 @@ public class MessageEntity {
     private Integer messageId;
     private String message;
     @Column(name = "message_date")
-    @JsonFormat(pattern = "yyyy-mm-dd")
     private Date messageDate;
     @Column(name = "user_id")
     private Integer userId;

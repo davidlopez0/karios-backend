@@ -22,7 +22,12 @@ public class MessageRepositoryImpl implements MessageRepository {
     public List<Message> getAll() {
         return mapper.toMessages((List<MessageEntity>) messageCrudRepository.findAll());
     }
-
+    
+    @Override
+    public List<Message> getAllByChatId(Integer id){
+    	return mapper.toMessages((List<MessageEntity>) messageCrudRepository.findAllByChatId(id));
+    }
+    
     @Override
     public Message save(MessageEntity messageEntity) {
         return mapper.toMessage(messageCrudRepository.save(messageEntity));
