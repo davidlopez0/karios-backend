@@ -13,7 +13,7 @@ public class CorsConfig {
         return new WebMvcConfigurer() {
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/api/**")
-                        .allowedOrigins("https://karios-app.netlify.app")
+                        .allowedOrigins("https://karios.netlify.app")
                         .allowedMethods("*");
             }
         };
